@@ -95,12 +95,6 @@ def draw():
 
     circle(cxPos, cyPos, 60)
     # circle(x-Koordinate, y-Koordinate, Durchmesser) wird dem Spielstand entsprechend gezeichnet
-    point(747, 753)
-    point(887, 611)
-    point(1033, 467)
-    point(1177, 315)
-    point(1321, 203)
-    point(1445, 47)
        
 
 def keyPressed():
