@@ -26,7 +26,7 @@ def setup():
     global t
     
     global bg
-    bg = loadImage("mountain1.jpg")
+    bg = loadImage("mountain.jpg")
 
 
     
