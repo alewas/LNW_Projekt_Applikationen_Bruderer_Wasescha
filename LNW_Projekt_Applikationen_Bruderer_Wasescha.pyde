@@ -11,7 +11,6 @@ primfaktoren = [2,3,5,7,11,13]
 userEingabe = True
 k = False
 t = True
-txt =""
 x = 0
 cxPos = 459
 cyPos = 981
@@ -22,14 +21,11 @@ def setup():
     
     xPos = 100
     yPos = 100
-    global k
-    global t
-    
+
     global bg
     bg = loadImage("mountain.jpg")
 
 
-    
     i = randint(0, 5)
     a = primfaktoren[ i ]
     b = randint(14, 100)
@@ -48,26 +44,22 @@ def draw():
     
     textSize(64)
     fill(0,139,0)
-    text(txt, 300, 310)
-    stroke(0, 0, 0)
     strokeWeight(12)
 #Setzen aller Parameter und Variablen für den Start des Spiels
+#Stroke Weight Umrandung des Kreises
+#fill Farbe Text + Kreis
 
     if x < 7 and userEingabe == True:
     #Spieldurchgänge werden initiiert
 
     
         if t == k:
-            print ("richtig")
             x = x+1
-            print(x)
             cxPos = cxPos + 144
             cyPos = cyPos - 114 
 
         else:
-            print ("Falsch")
             x = 1
-            print(x)
             cxPos = 603
             cyPos = 867
             #Bei einer falschen Antwort wird das Spiel neu gestartet
@@ -84,10 +76,9 @@ def draw():
     
     elif x == 7:
         background(bg)
-        text("Gewonnen! Druecke s fuer Neustart", xPos, yPos)
+        text("Gewonnen! Gib s ein, um neu zu starten.", xPos, yPos)
         if key == "s":
-            x = 1
-            background(bg)
+            x = 0
             cxPos = 459
             cyPos = 981
             userEingabe = True
@@ -101,7 +92,6 @@ def draw():
 def keyPressed():
     global userEingabe
     global k
-    global t
     userEingabe = True
     if key == "j":
         k = True
